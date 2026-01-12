@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Settings Icon (Top Right) -->
+    <ImageButton
+        android:id="@+id/ivSettings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/settings"
+        android:src="@drawable/sharp_app_settings_alt_24"
+        app:tint="@android:color/darker_gray" />
+
+    <!-- Welcome Message (Top Left) -->
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/ivSettings"
+        android:layout_marginEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:text="Welcome, User" />
+
+    <!-- Main SOS Button and Loading Indicator (Center) -->
+    <FrameLayout
+        android:id="@+id/flSosContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!-- The visibility of the SOS button is now controlled from MainActivity -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnSos"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:cardCornerRadius="110dp"
+            app:cardElevation="8dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/red"
+                android:text="@string/sos"
+                android:textColor="@android:color/white"
+                android:textSize="56sp"
+                android:textStyle="bold"
+                android:clickable="false"/>
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <!-- "No Contacts" Placeholder (Center) -->
+    <LinearLayout
+        android:id="@+id/layoutNoContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_baseline_contacts_24"
+            app:tint="@color/red"
+            android:contentDescription="No contacts icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Emergency Contacts"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Please add at least one contact to enable the SOS feature."/>
+
+        <Button
+            android:id="@+id/btnAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/add_emergency_contact"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

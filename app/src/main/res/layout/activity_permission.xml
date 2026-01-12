@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#FFFFFF">
+
+    <!-- Safety Icon -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_dialog_info"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Permission Icon"
+        android:tint="#B71C1C" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safety First"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#212121"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location &amp; SMS Access"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#B71C1C"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To automatically detect accidents and alert your emergency contacts, this app requires background location and SMS permissions. Your data is only used during emergencies."
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#757575"/>
+
+    <!-- Professional Button Styling -->
+    <Button
+        android:id="@+id/btnGrantPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="GRANT PERMISSIONS"
+        android:textStyle="bold"
+        android:backgroundTint="#B71C1C"
+        android:textColor="#FFFFFF"
+        android:letterSpacing="0.1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Why do we need this?"
+        android:textSize="13sp"
+        android:textColor="#9E9E9E"
+        android:padding="10dp"/>
+
+</LinearLayout>

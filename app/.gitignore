@@ -1,0 +1,6 @@
+/build
+.env
+__pycache__/
+*.pyc
+.venv/
+ai-accident-firebase-adminsdk-fbsvc-0b4a184229.json
